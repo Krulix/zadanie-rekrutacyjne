@@ -7,6 +7,7 @@ public class RodRenderer : MonoBehaviour
     public List<GameObject> rodList;
     public int lastRod;
 
+    public Transform rodRotator;
     public Transform rodParent;
     
     public void ChangeRod()
@@ -21,6 +22,11 @@ public class RodRenderer : MonoBehaviour
         newRod.transform.SetParent(rodParent);
         newRod.transform.localPosition = Vector3.zero;
         newRod.transform.localRotation = Quaternion.EulerAngles(Vector3.zero);
+    }
+
+    public void RotateRod(float value)
+    {
+        rodRotator.Rotate(0, value, 0);
     }
 
     private void ClearChildren()

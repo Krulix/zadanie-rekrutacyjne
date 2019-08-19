@@ -26,6 +26,11 @@ public class RodWindow : MonoBehaviour
         Hide();
     }
 
+    private void Start()
+    {
+        bigRodBox.SetRotateAction(rodRenderer.RotateRod);
+    }
+
     public void Hide()
     {
         canvasGroup.alpha = 0;

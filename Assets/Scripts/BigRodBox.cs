@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -6,6 +7,7 @@ using UnityEngine.UI;
 
 public class BigRodBox : MonoBehaviour
 {
+    public RodRotationController rotationController;
     public TextMeshProUGUI rodName;
     public TextMeshProUGUI rodCategory;
     public Image levelBG;
@@ -29,6 +31,11 @@ public class BigRodBox : MonoBehaviour
         maxStatBarWidth = Mathf.FloorToInt(statBar1.rectTransform.sizeDelta.x);
         maxLevelBarWidth = Mathf.FloorToInt(levelBar.rectTransform.sizeDelta.x);
         canvasGroup = GetComponent<CanvasGroup>();
+    }
+
+    public void SetRotateAction(Action<float> action)
+    {
+        rotationController.SetRotateAction(action);
     }
 
     public void SetVisieble(bool isVisible)

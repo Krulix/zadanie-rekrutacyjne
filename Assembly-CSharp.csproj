@@ -67,6 +67,7 @@
     <Compile Include="Assets\Scripts\RodInfoManager.cs" />
     <Compile Include="Assets\Scripts\RodItem.cs" />
     <Compile Include="Assets\Scripts\RodRenderer.cs" />
+    <Compile Include="Assets\Scripts\RodRotationController.cs" />
     <Compile Include="Assets\Scripts\RodWindow.cs" />
     <Compile Include="Assets\Scripts\ScrollController.cs" />
     <Compile Include="Assets\Scripts\SpriteHolder.cs" />
